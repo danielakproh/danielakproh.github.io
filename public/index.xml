@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo for hugo</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Demo for hugo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jan 2024 18:09:49 -0800</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>combo</title>
+      <link>//localhost:1313/posts/combo/</link>
+      <pubDate>Wed, 24 Jan 2024 18:09:49 -0800</pubDate>
+      <guid>//localhost:1313/posts/combo/</guid>
+      <description>&lt;p&gt;Trying to nest thingscs&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Example</title>
+      <link>//localhost:1313/posts/example/</link>
+      <pubDate>Wed, 24 Jan 2024 18:09:49 -0800</pubDate>
+      <guid>//localhost:1313/posts/example/</guid>
+      <description>&lt;p&gt;This is an example after different front matter&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Another Note on A blogdown Tutorial</title>
+      <link>//localhost:1313/posts/another-note/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/another-note/</guid>
+      <description>&lt;p&gt;I just discovered &lt;a href=&#34;https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/&#34;&gt;an awesome tutorial&lt;/a&gt; on &lt;strong&gt;blogdown&lt;/strong&gt; written by Alison. I have to admit this is &lt;em&gt;the&lt;/em&gt; best &lt;strong&gt;blogdown&lt;/strong&gt; tutorial I have seen so far.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/03-blogdown-2021.png&#34; alt=&#34;Alison&amp;rsquo;s blogdown tutorial&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Article</title>
+      <link>//localhost:1313/posts/articles/2022/another-note/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/articles/2022/another-note/</guid>
+      <description>&lt;p&gt;God is good &amp;lt;3&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

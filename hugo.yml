@@ -1,0 +1,14 @@
+baseURL: ""
+languageCode: 'en-us'
+title: Demo for hugo
+theme: hugo-xmin
+
+menu:
+  main:
+    - name: Home
+    - url: ""
+    - name: Home22
+    - url: ""
+
+params:
+  ShowBreadCrumbs: true
