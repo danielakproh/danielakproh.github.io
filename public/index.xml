@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo for hugo</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Demo for hugo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2024 13:47:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math Examples</title>
+      <link>//localhost:1313/posts/test/</link>
+      <pubDate>Mon, 21 Oct 2024 13:47:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/test/</guid>
+      <description>&lt;p&gt;Followed &lt;a href=&#34;https://gohugo.io/content-management/mathematics/&#34;&gt;this tutorial&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re using MathJax to render the LateX formulas.&lt;/p&gt;&#xA;&lt;p&gt;This is an inline \(a^*=x-b^*\) equation.&lt;/p&gt;&#xA;&lt;p&gt;These are block equations:&lt;/p&gt;&#xA;\[&#xD;&#xA;\begin{aligned}&#xD;&#xA;KL(\hat{y} || y) &amp;= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\&#xD;&#xA;JS(\hat{y} || y) &amp;= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))&#xD;&#xA;\end{aligned}&#xD;&#xA;\]</description>
+    </item>
+  </channel>
+</rss>

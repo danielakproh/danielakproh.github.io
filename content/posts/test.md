@@ -1,8 +1,9 @@
 ---
 date: 2024-10-21T13:47:00-00:00
+author: Daniel Akproh
 params:
   math: true
-title: Math examples
+title: Math Examples
 ---
 
 Followed [this tutorial](https://gohugo.io/content-management/mathematics/).
