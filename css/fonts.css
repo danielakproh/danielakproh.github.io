@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Computer Modern Serif';
+  src: 
+    url('computer-modern-serif.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Computer Modern Serif', Arial;
+}
