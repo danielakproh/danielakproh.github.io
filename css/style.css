@@ -1,8 +1,12 @@
+html {
+  font-size: 18px;
+}
+
 body {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
-  padding: 1em;
-  line-height: 1.5;
+  padding: 1.5em;
+  line-height: 1.75;
 }
 
 /* header and footer areas */
