@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Demo for hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2024 00:14:03 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2024 12:30:13 -0500</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post4</title>
+      <link>//localhost:1313/posts/my-first-post4/</link>
+      <pubDate>Thu, 14 Nov 2024 12:30:13 -0500</pubDate>
+      <guid>//localhost:1313/posts/my-first-post4/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;XMin&lt;/strong&gt; is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the  &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal. In fact, this theme does not contain any JavaScript code at all, although on this example website I did introduce some JavaScript code (still relatively simple anyway). The theme does not contain any images, either, and is pretty much a plain-text theme.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post3</title>
+      <link>//localhost:1313/posts/my-first-post3/</link>
+      <pubDate>Thu, 14 Nov 2024 12:01:51 -0500</pubDate>
+      <guid>//localhost:1313/posts/my-first-post3/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;XMin&lt;/strong&gt; is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the  &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal. In fact, this theme does not contain any JavaScript code at all, although on this example website I did introduce some JavaScript code (still relatively simple anyway). The theme does not contain any images, either, and is pretty much a plain-text theme.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post2</title>
       <link>//localhost:1313/posts/my-first-post2/</link>

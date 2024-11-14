@@ -11,3 +11,8 @@ menu:
     - name: About
       url: "about/"
       weight: 2
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
