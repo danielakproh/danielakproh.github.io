@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Demo for hugo</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on Demo for hugo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Nov 2024 00:14:03 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post2</title>
+      <link>//localhost:1313/posts/my-first-post2/</link>
+      <pubDate>Thu, 14 Nov 2024 00:14:03 -0500</pubDate>
+      <guid>//localhost:1313/posts/my-first-post2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>//localhost:1313/posts/my-first-post/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;p&gt;This sample post is mainly for&#xA;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; users. If you do not use&#xA;&lt;strong&gt;blogdown&lt;/strong&gt;, you can skip the first section.&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-markdown-or-r-markdown&#34;&gt;1. Markdown or R Markdown&lt;/h1&gt;&#xA;&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown&#xA;(&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;You cannot run any R code in a plain Markdown document, whereas in an R&#xA;Markdown document, you can embed R code chunks (&lt;code&gt;```{r}&lt;/code&gt;);&lt;/li&gt;&#xA;&lt;li&gt;A plain Markdown post is rendered through&#xA;&lt;a href=&#34;https://gohugo.io/overview/configuration/&#34;&gt;Goldmark&lt;/a&gt; by default, and an R&#xA;Markdown document is compiled by&#xA;&lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;&lt;strong&gt;rmarkdown&lt;/strong&gt;&lt;/a&gt; and&#xA;&lt;a href=&#34;http://pandoc.org&#34;&gt;Pandoc&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;As of Hugo v0.122.0, you can enable typesetting (\LaTeX) math in Markdown using&#xA;the standard syntax. To do so, you have make use of the goldmark &lt;code&gt;passthrough&lt;/code&gt;&#xA;extension inside your config file (e.g., &lt;code&gt;hugo.yaml&lt;/code&gt;). Afterwards you can use&#xA;standard (\TeX) syntax (inline: &lt;code&gt;\( ... \)&lt;/code&gt;; display style: &lt;code&gt;$$ ... $$&lt;/code&gt;) to&#xA;display formulae, e.g., (S_n = \sum_{i=1}^n X_i). For details, please refer to&#xA;the official &lt;a href=&#34;https://gohugo.io/content-management/mathematics/&#34;&gt;Hugo docs&lt;/a&gt;.&#xA;Alternatively, you may see&#xA;&lt;a href=&#34;https://yihui.org/en/2018/07/latex-math-markdown/&#34;&gt;this post&lt;/a&gt; for a general&#xA;solution, which works with any Hugo version and requires no configuration.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
