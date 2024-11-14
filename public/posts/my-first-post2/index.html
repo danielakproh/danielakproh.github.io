@@ -10,32 +10,43 @@
   </head>
 
   <body>
-    <nav>
-    <ul class="menu">
+    <header class="header-meta">
       
-      <li><a href="/">Home</a></li>
+      <div class="author-info">
+        <p class="author">Author: Default Author Name</p>
+        <p class="email">Email: <a href="mailto:author@example.com">author@example.com</a></p>
+      </div>
+
       
-      <li><a href="/about/">About</a></li>
-      
-    </ul>
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/about/">About</a></li>
+          
+        </ul>
+      </nav>
+    </header>
     <hr/>
-    </nav>
 
 
-<div class="container">
-  <div class="article-meta">
-    <h1><span class="title">My First Post2</span></h1>
-    
-    <h2 class="date">2024/11/14</h2>
-  </div>
+<div class="outer-wrapper">
+  
+  <aside class="toc sticky">
+    <nav id="TableOfContents"></nav>
+  </aside>
 
-  <div class="content-container">
-    <aside class="toc sticky">
-      <nav id="TableOfContents"></nav>
-    </aside>
-    <main class="content">
+  
+  <div class="body-container">
+    <div class="article-meta">
+      <h1><span class="title">My First Post2</span></h1>
+      <h2 class="date">2024/11/14</h2>
+    </div>
+
+    <div class="content">
       
-    </main>
+    </div>
   </div>
 </div>
 
@@ -47,3 +58,38 @@
 </html>
 
 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const tocLinks = document.querySelectorAll(".toc a");
+  const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      
+      entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
+      
+      for (const entry of entries) {
+        const index = sections.indexOf(entry.target);
+        if (entry.isIntersecting) {
+          tocLinks.forEach((link) => link.classList.remove("active"));
+          if (tocLinks[index]) tocLinks[index].classList.add("active");
+          break; 
+        }
+      }
+    },
+    { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  
+  window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+      tocLinks.forEach((link) => link.classList.remove("active"));
+      tocLinks[tocLinks.length - 1].classList.add("active"); 
+    }
+  });
+});
+</script>

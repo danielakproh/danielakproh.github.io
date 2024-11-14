@@ -10,39 +10,50 @@
   </head>
 
   <body>
-    <nav>
-    <ul class="menu">
+    <header class="header-meta">
       
-      <li><a href="/">Home</a></li>
+      <div class="author-info">
+        <p class="author">Author: Default Author Name</p>
+        <p class="email">Email: <a href="mailto:author@example.com">author@example.com</a></p>
+      </div>
+
       
-      <li><a href="/about/">About</a></li>
-      
-    </ul>
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/about/">About</a></li>
+          
+        </ul>
+      </nav>
+    </header>
     <hr/>
-    </nav>
 
 
-<div class="container">
-  <div class="article-meta">
-    <h1><span class="title">My First Post3</span></h1>
-    
-    <h2 class="date">2024/11/14</h2>
-  </div>
-
-  <div class="content-container">
-    <aside class="toc sticky">
-      <nav id="TableOfContents">
+<div class="outer-wrapper">
+  
+  <aside class="toc sticky">
+    <nav id="TableOfContents">
   <ul>
-    <li><a href="#hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</a></li>
     <li><a href="#custom-layouts">Custom layouts</a></li>
     <li><a href="#other-features">Other features</a></li>
+    <li><a href="#design-philosophy">Design philosophy</a></li>
   </ul>
 </nav>
-    </aside>
-    <main class="content">
+  </aside>
+
+  
+  <div class="body-container">
+    <div class="article-meta">
+      <h1><span class="title">My First Post3</span></h1>
+      <h2 class="date">2024/11/14</h2>
+    </div>
+
+    <div class="content">
       <p><strong>XMin</strong> is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the  <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal. In fact, this theme does not contain any JavaScript code at all, although on this example website I did introduce some JavaScript code (still relatively simple anyway). The theme does not contain any images, either, and is pretty much a plain-text theme.</p>
 <p>The theme name &ldquo;XMin&rdquo; can be interpreted as &ldquo;<strong>X</strong>ie&rsquo;s <strong>Min</strong>imal theme&rdquo; (Xie is my last name) or &ldquo;e<strong>X</strong>tremely <strong>Min</strong>imal theme&rdquo;.</p>
-<h2 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h2>
+<h1 id="hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</h1>
 <p>For this example site, I defined permalinks for two sections, <code>post</code> and <code>note</code>, so that the links to pages under these directories will contain the date info, e.g., <code>https://xmin.yihui.org/post/2016/02/14/a-plain-markdown-post/</code>. This is optional, and it is up to your personal taste of URLs.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">permalinks</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">note</span>: <span style="color:#e6db74">&#34;/note/:year/:month/:day/:slug/&#34;</span>
@@ -100,7 +111,7 @@
 </li>
 </ul>
 <p>To fully understand these examples, you have to read <a href="https://bookdown.org/yihui/blogdown/templates.html">the section on Hugo templates</a> in the <strong>blogdown</strong> book.</p>
-<h1 id="design-philosophy">Design philosophy</h1>
+<h2 id="design-philosophy">Design philosophy</h2>
 <p>Lastly, a few words about my design philosophy for this theme: I have been relying on existing frameworks like Bootstrap for years since I&rsquo;m not really a designer, and I was always scared by the complexity of CSS.</p>
 <p>When I started writing this theme, I asked myself, &ldquo;<em>What if I just write from scratch?</em>&rdquo; No Bootstrap. No Normalize.css. I don&rsquo;t care about IE (life could be so much easier without IE) or inconsistencies among browsers (for personal websites). As long as the theme looks okay in Chrome, Firefox, and Safari, I&rsquo;m done. Thanks to the simplicity of Markdown, you cannot really produce very complicated HTML, and I think styling the HTML output from Markdown is much simpler than general HTML documents. For example, I do not need to care much about form elements like textareas or buttons.</p>
 <p>After I finished this theme, I started to wonder why I&rsquo;d need <code>normalize.css</code> at all. The default appearance of modern browsers actually looks pretty good in my eyes, after I tweak the typeface a little bit.</p>
@@ -112,7 +123,7 @@
 </ul>
 <p>I hope you can enjoy this theme. The source code is <a href="https://github.com/yihui/hugo-xmin">on Github</a>. Happy hacking!</p>
 
-    </main>
+    </div>
   </div>
 </div>
 
@@ -124,3 +135,38 @@
 </html>
 
 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const tocLinks = document.querySelectorAll(".toc a");
+  const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      
+      entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
+      
+      for (const entry of entries) {
+        const index = sections.indexOf(entry.target);
+        if (entry.isIntersecting) {
+          tocLinks.forEach((link) => link.classList.remove("active"));
+          if (tocLinks[index]) tocLinks[index].classList.add("active");
+          break; 
+        }
+      }
+    },
+    { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  
+  window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+      tocLinks.forEach((link) => link.classList.remove("active"));
+      tocLinks[tocLinks.length - 1].classList.add("active"); 
+    }
+  });
+});
+</script>

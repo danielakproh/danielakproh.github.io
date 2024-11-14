@@ -3,6 +3,10 @@ languageCode: 'en-us'
 title: Demo for hugo
 theme: xmin
 
+params:
+  author: "Default Author Name"
+  email: "author@example.com"
+
 menu:
   main:
     - name: Home
