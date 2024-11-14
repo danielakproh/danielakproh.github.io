@@ -1,0 +1,13 @@
+baseURL: "danielakproh.github.io"
+languageCode: 'en-us'
+title: Demo for hugo
+theme: xmin
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: About
+      url: "about/"
+      weight: 2
