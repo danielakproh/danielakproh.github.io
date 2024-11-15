@@ -6,8 +6,15 @@
     <description>Recent content on Demo for hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2024 00:46:44 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2024 11:48:24 -0500</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Humberger</title>
+      <link>//localhost:1313/posts/humberger/</link>
+      <pubDate>Fri, 15 Nov 2024 11:48:24 -0500</pubDate>
+      <guid>//localhost:1313/posts/humberger/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;XMin&lt;/strong&gt; is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the  &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal. In fact, this theme does not contain any JavaScript code at all, although on this example website I did introduce some JavaScript code (still relatively simple anyway). The theme does not contain any images, either, and is pretty much a plain-text theme.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Post 2</title>
       <link>//localhost:1313/posts/my-post-2/</link>

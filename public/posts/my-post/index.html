@@ -14,7 +14,7 @@
       
       <div class="author-info">
         <p class="author">Author: M. Daniel Akproh</p>
-        <p class="email">Email: <a href="mailto:dakproh@g">dakproh@g</a></p>
+        <p class="email">Email: <a href="mailto:dakproh@gmail.com">dakproh@gmail.com</a></p>
       </div>
 
       
@@ -32,18 +32,20 @@
 
 
 
-<div class="outer-wrapper">
-  
-  <aside class="toc sticky">
-    <nav id="TableOfContents">
+
+<div class="toc-toggle" onclick="toggleTOC()">☰</div>
+
+<aside class="toc sticky">
+  <nav id="TableOfContents">
   <ul>
     <li><a href="#hugoyaml-the-config-file"><code>hugo.yaml</code> (the config file)</a></li>
     <li><a href="#custom-layouts">Custom layouts</a></li>
     <li><a href="#other-features">Other features</a></li>
   </ul>
 </nav>
-  </aside>
+</aside>
 
+<div class="outer-wrapper">
   
   <div class="body-container">
     <div class="article-meta">
@@ -136,55 +138,59 @@
 </html>
 
 
-
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tocLinks = document.querySelectorAll(".toc a");
-      const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
-  
-      const observer = new IntersectionObserver(
-        (entries) => {
-          
-          entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
-          
-          for (const entry of entries) {
-            const index = sections.indexOf(entry.target);
-            if (entry.isIntersecting) {
-              tocLinks.forEach((link) => link.classList.remove("active"));
-              if (tocLinks[index]) tocLinks[index].classList.add("active");
-              break; 
-            }
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocLinks = document.querySelectorAll(".toc a");
+    const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
+    const toc = document.querySelector('.toc');
+    const tocToggle = document.querySelector('.toc-toggle');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        
+        entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
+
+        for (const entry of entries) {
+          const index = sections.indexOf(entry.target);
+          if (entry.isIntersecting) {
+            tocLinks.forEach((link) => link.classList.remove("active"));
+            if (tocLinks[index]) tocLinks[index].classList.add("active");
+            break; 
           }
-        },
-        { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
-      );
-  
-      sections.forEach((section) => observer.observe(section));
-  
-      
-      window.addEventListener("scroll", () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-          tocLinks.forEach((link) => link.classList.remove("active"));
-          tocLinks[tocLinks.length - 1].classList.add("active"); 
+        }
+      },
+      { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    
+    window.addEventListener("scroll", () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+        tocLinks.forEach((link) => link.classList.remove("active"));
+        tocLinks[tocLinks.length - 1].classList.add("active"); 
+      }
+    });
+
+    
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 20, 
+            behavior: "smooth"
+          });
         }
       });
-  
-      
-      tocLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
-          const targetElement = document.getElementById(targetId);
-  
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 20, 
-              behavior: "smooth"
-            });
-          }
-        });
-      });
     });
-  </script>
-  
+
+    
+    tocToggle.addEventListener("click", () => {
+      toc.classList.toggle('show');
+    });
+  });
+</script>
