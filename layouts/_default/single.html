@@ -24,35 +24,52 @@
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const tocLinks = document.querySelectorAll(".toc a");
-  const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      // Sort entries to find the one closest to the top of the viewport
-      entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
-      
-      for (const entry of entries) {
-        const index = sections.indexOf(entry.target);
-        if (entry.isIntersecting) {
+    document.addEventListener("DOMContentLoaded", function () {
+      const tocLinks = document.querySelectorAll(".toc a");
+      const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Sort entries to find the one closest to the top of the viewport
+          entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
+          
+          for (const entry of entries) {
+            const index = sections.indexOf(entry.target);
+            if (entry.isIntersecting) {
+              tocLinks.forEach((link) => link.classList.remove("active"));
+              if (tocLinks[index]) tocLinks[index].classList.add("active");
+              break; // Stop after highlighting the closest section
+            }
+          }
+        },
+        { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } // Higher threshold to reduce flickering
+      );
+  
+      sections.forEach((section) => observer.observe(section));
+  
+      // Extra check for bottom of page
+      window.addEventListener("scroll", () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
           tocLinks.forEach((link) => link.classList.remove("active"));
-          if (tocLinks[index]) tocLinks[index].classList.add("active");
-          break; // Stop after highlighting the closest section
+          tocLinks[tocLinks.length - 1].classList.add("active"); // Highlight the last TOC item
         }
-      }
-    },
-    { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } // Higher threshold to reduce flickering
-  );
-
-  sections.forEach((section) => observer.observe(section));
-
-  // Extra check for bottom of page
-  window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-      tocLinks.forEach((link) => link.classList.remove("active"));
-      tocLinks[tocLinks.length - 1].classList.add("active"); // Highlight the last TOC item
-    }
-  });
-});
-</script>
+      });
+  
+      // Smooth scrolling for TOC links
+      tocLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+  
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20, // Adjust for any fixed headers
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    });
+  </script>
+  

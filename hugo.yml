@@ -4,8 +4,8 @@ title: Demo for hugo
 theme: xmin
 
 params:
-  author: "Default Author Name"
-  email: "author@example.com"
+  author: "M. Daniel Akproh"
+  email: "dakproh@gmail.com"
 
 menu:
   main:

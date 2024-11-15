@@ -14,12 +14,12 @@ body {
 
 /* TOC styling */
 .toc {
-  flex: 0 0 200px; /* Set fixed width for TOC */
+  flex: 0 0 200px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background: #f9f9f9;
-  max-height: fit-content; /* Ensure background box only fits content */
+  max-height: fit-content;
 }
 
 .sticky {
@@ -30,13 +30,18 @@ body {
 
 /* Main body container styling */
 .body-container {
-  flex: 1; /* Take remaining space for main content */
+  flex: 1;
+  overflow: hidden;
 }
 
 /* Article meta information */
 .article-meta {
   text-align: center;
   margin-bottom: 2em;
+}
+
+.title {
+  font-size: 1.1em;
 }
 
 /* TOC links styling */
@@ -57,67 +62,120 @@ body {
   padding-left: 5px;
 }
 
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
+/* Header and footer areas */
+.menu {
+  padding: 0;
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.menu a {
   text-decoration: none;
+  color: #333;
   background: #eee;
   padding: 5px;
   border-radius: 5px;
 }
-.menu {
-  text-align: right;
+
+.menu a:hover {
+  background: #ddd;
 }
 
-.article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+.article-meta, footer {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 hr {
-  /* border-style: dashed; */
   color: #ddd;
 }
 
-/* code */
+/* Code block and table styling */
 pre {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 5px #eee;
   padding: 1em;
   overflow-x: auto;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
 
-/* misc elements */
-img, iframe, video { max-width: 100%; }
-main { hyphens: auto; }
+code {
+  background: #f9f9f9;
+}
+
+pre code {
+  background: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th, td {
+  padding: 5px;
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: #eee;
+}
+
+/* Ensure content elements stay within the container width */
+.content img, .content table, .content pre, .content code {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Miscellaneous elements */
+img, iframe, video {
+  max-width: 100%;
+}
+
+main {
+  hyphens: auto;
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 5px solid #ccc;
   padding: 3px 1em 3px;
 }
 
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
-
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .outer-wrapper {
-    flex-direction: column; /* Stack TOC and main content vertically */
+    flex-direction: column;
   }
   
   .toc {
-    width: 100%; /* Full width for TOC on small screens */
+    width: 100%;
     margin-bottom: 1em;
+    position: static;
+    display: none;
   }
 
-  /* TOC toggle button for mobile view */
   .toc-toggle {
     display: block;
     text-align: center;
@@ -127,15 +185,35 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
     margin-bottom: 1em;
     cursor: pointer;
   }
-}
 
-@media (min-width: 769px) {
-  .toc-toggle {
-    display: none; /* Hide TOC toggle button on larger screens */
+  .hamburger {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.show {
+    display: block;
+    position: absolute;
+    background: #f9f9f9;
+    top: 50px;
+    right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
   }
 }
 
-/* Show TOC when toggled on mobile */
+@media (min-width: 769px) {
+  .toc-toggle, .hamburger {
+    display: none;
+  }
+}
+
 .toc.show {
   display: block;
 }
@@ -164,52 +242,4 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
 
 .author-info .email a:hover {
   text-decoration: underline;
-}
-
-/* Menu styling */
-.menu {
-  text-align: right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  display: inline-block;
-  margin-left: 1em;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.menu a:hover {
-  background: #ddd;
-}
-
-/* Ensure content elements stay within the container width */
-.content, .body-container {
-  overflow: hidden;
-}
-
-/* Restrict large tables and images */
-.content img, .content table, .content pre, .content code {
-  max-width: 100%;
-  overflow-x: auto;
-  box-sizing: border-box;
-}
-
-/* Additional styling for tables and code blocks */
-table {
-  width: 100%; /* Ensures tables use full width of container */
-  border-collapse: collapse;
-}
-
-pre, code {
-  white-space: pre-wrap; /* Allows code to wrap within the container */
-  word-wrap: break-word;
 }
