@@ -6,47 +6,34 @@ body {
   line-height: 1.5;
 }
 
-/* Outer wrapper for TOC and main body container */
+/* Outer wrapper and main body container */
 .outer-wrapper {
   display: flex;
   gap: 20px;
+  flex-direction: column; /* Default direction for smaller screens */
 }
 
-/* TOC styling */
-.toc {
-  /* flex: 0 0 200px; */
-  position: fixed;
-  left: -2px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #f9f9f9;
-  max-height: fit-content;
-}
-
-.sticky {
-  /* position: sticky; */
-  /* top: 20px;
-  overflow-y: auto; */
-}
-
-/* Main body container styling */
 .body-container {
   flex: 1;
   overflow: hidden;
 }
 
-/* Article meta information */
-.article-meta {
-  text-align: center;
-  margin-bottom: 2em;
+/* TOC styling */
+.toc {
+  position: fixed;
+  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC based on viewport */
+  top: 20px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  max-height: calc(100vh - 40px); /* Ensure it stays within viewport height */
+  overflow-y: auto;
+  z-index: 1000;
+  display: block; /* Default for larger screens */
 }
 
-.title {
-  font-size: 1.1em;
-}
-
-/* TOC links styling */
 .toc ul {
   list-style-type: none;
   padding: 0;
@@ -64,9 +51,43 @@ body {
   padding-left: 5px;
 }
 
+/* Article meta information */
+.article-meta {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-size: 1.1em;
+}
+
 /* Header and footer areas */
+.header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  text-align: left;
+  font-size: 1em;
+  color: #555;
+}
+
+.author-info p {
+  margin: 0;
+}
+
+.author-info .email a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.author-info .email a:hover {
+  text-decoration: underline;
+}
+
 .menu {
-  padding: 0;
   text-align: right;
   list-style-type: none;
   margin: 0;
@@ -90,7 +111,7 @@ body {
   background: #ddd;
 }
 
-.article-meta, footer {
+footer {
   text-align: center;
 }
 
@@ -138,8 +159,11 @@ thead, tfoot, tr:nth-child(even) {
   background: #eee;
 }
 
-/* Ensure content elements stay within the container width */
-.content img, .content table, .content pre, .content code {
+/* Content elements */
+.content img,
+.content table,
+.content pre,
+.content code {
   max-width: 100%;
   overflow-x: auto;
   box-sizing: border-box;
@@ -167,133 +191,7 @@ blockquote {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1300px) {
-  .outer-wrapper {
-    flex-direction: column;
-  }
-
-  .toc-toggle {
-    display: block;
-    text-align: center;
-    background: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 1em;
-    cursor: pointer;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-
-  .menu {
-    /* display: none; */
-  }
-
-  .menu.show {
-    display: block;
-    position: absolute;
-    background: #f9f9f9;
-    top: 50px;
-    right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .toc-toggle, .hamburger {
-    display: none;
-  }
-}
-
-.toc.show {
-  display: block;
-}
-
-/* Header meta area styling */
-.header-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.author-info {
-  text-align: left;
-  font-size: 0.9em;
-  color: #555;
-}
-
-.author-info p {
-  margin: 0;
-}
-
-.author-info .email a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.author-info .email a:hover {
-  text-decoration: underline;
-}
-
-/* TOC styling */
-.toc {
-  position: fixed;
-  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC based on viewport */
-  top: 20px;
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #f9f9f9;
-  max-height: calc(100vh - 40px); /* Ensure it stays within viewport height */
-  overflow-y: auto;
-  display: block; /* Default for larger screens */
-  z-index: 1000;
-}
-
-
-/* Hamburger menu toggle button */
-.toc-toggle {
-  display: none; /* Hidden on larger screens */
-  position: fixed;
-  top: 80px;
-  right: calc((100vw - 900px) / 2);
-  background: #eee;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-/* Show TOC for mobile screens when toggled */
-.toc.show {
-  display: block;
-  position: fixed;
-  top: 60px;
-  left: 10px;
-  width: 250px;
-  max-height: calc(100vh - 60px);
-  padding: 10px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  z-index: 1000;
-  overflow-y: auto;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1300px) {
   .toc {
     display: none; /* Hide TOC by default */
   }
-
-  .toc-toggle {
-    display: block;
-    right: calc((100vw - 90%) / 2); 
-  }
 }
-
-
