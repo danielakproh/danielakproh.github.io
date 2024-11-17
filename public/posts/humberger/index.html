@@ -18,6 +18,9 @@
       </div>
 
       
+      <div class="toc-toggle" onclick="toggleTOC()">☰</div>
+
+      
       <nav>
         <ul class="menu">
           
@@ -29,11 +32,6 @@
       </nav>
     </header>
     <hr/>
-
-
-
-
-<div class="toc-toggle" onclick="toggleTOC()">☰</div>
 
 <aside class="toc sticky">
   <nav id="TableOfContents">
@@ -138,6 +136,8 @@
 </html>
 
 
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const tocLinks = document.querySelectorAll(".toc a");
@@ -145,6 +145,19 @@
     const toc = document.querySelector('.toc');
     const tocToggle = document.querySelector('.toc-toggle');
 
+    
+    function toggleTOC() {
+      if (toc) {
+        toc.classList.toggle('show');
+      }
+    }
+
+    
+    if (tocToggle) {
+      tocToggle.addEventListener("click", toggleTOC);
+    }
+
+    
     const observer = new IntersectionObserver(
       (entries) => {
         
@@ -187,10 +200,7 @@
         }
       });
     });
-
-    
-    tocToggle.addEventListener("click", () => {
-      toc.classList.toggle('show');
-    });
   });
 </script>
+
+  

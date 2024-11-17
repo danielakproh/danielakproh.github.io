@@ -1,8 +1,4 @@
 {{ partial "header.html" . }}
-
-<!-- TOC toggle button (Hamburger Menu for mobile) -->
-<div class="toc-toggle" onclick="toggleTOC()">☰</div>
-
 <aside class="toc sticky">
   {{ .TableOfContents }}
 </aside>
@@ -23,6 +19,8 @@
 
 {{ partial "footer.html" . }}
 
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const tocLinks = document.querySelectorAll(".toc a");
@@ -30,6 +28,19 @@
     const toc = document.querySelector('.toc');
     const tocToggle = document.querySelector('.toc-toggle');
 
+    // Function to toggle TOC visibility
+    function toggleTOC() {
+      if (toc) {
+        toc.classList.toggle('show');
+      }
+    }
+
+    // Attach toggle function to the hamburger menu
+    if (tocToggle) {
+      tocToggle.addEventListener("click", toggleTOC);
+    }
+
+    // Intersection Observer for TOC highlighting
     const observer = new IntersectionObserver(
       (entries) => {
         // Sort entries to find the one closest to the top of the viewport
@@ -72,10 +83,7 @@
         }
       });
     });
-
-    // Toggle TOC visibility for smaller screens
-    tocToggle.addEventListener("click", () => {
-      toc.classList.toggle('show');
-    });
   });
 </script>
+
+  

@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   padding: 1em;
   line-height: 1.5;
@@ -166,7 +166,7 @@ blockquote {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .outer-wrapper {
     flex-direction: column;
   }
@@ -188,7 +188,7 @@ blockquote {
   }
 
   .menu {
-    display: none;
+    /* display: none; */
   }
 
   .menu.show {
@@ -203,7 +203,7 @@ blockquote {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .toc-toggle, .hamburger {
     display: none;
   }
@@ -260,8 +260,8 @@ blockquote {
 .toc-toggle {
   display: none; /* Hidden on larger screens */
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 80px;
+  right: calc((100vw - 900px) / 2);
   background: #eee;
   padding: 10px;
   border-radius: 5px;
@@ -274,7 +274,7 @@ blockquote {
   display: block;
   position: fixed;
   top: 60px;
-  left: 0;
+  left: 10px;
   width: 250px;
   max-height: calc(100vh - 60px);
   padding: 10px;
@@ -285,13 +285,15 @@ blockquote {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .toc {
     display: none; /* Hide TOC by default */
   }
 
   .toc-toggle {
-    display: block; /* Show the hamburger menu */
+    display: block;
+    right: calc((100vw - 90%) / 2); 
   }
 }
+
 

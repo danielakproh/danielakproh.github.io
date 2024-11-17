@@ -17,6 +17,9 @@
         {{ with .Params.email | default .Site.Params.email }}<p class="email">Email: <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
       </div>
 
+      <!-- Hamburger Menu for mobile -->
+      <div class="toc-toggle" onclick="toggleTOC()">☰</div>
+
       <!-- Menu on the right -->
       <nav>
         <ul class="menu">
@@ -27,4 +30,3 @@
       </nav>
     </header>
     <hr/>
-
