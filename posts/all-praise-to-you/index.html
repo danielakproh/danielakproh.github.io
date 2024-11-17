@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Praise to You | Demo for hugo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <header class="header-meta">
+      
+      <div class="author-info">
+        <p class="author">Author: Daniel Akproh</p>
+        <p class="email">Email: <a href="mailto:dakproh@gmail.com">dakproh@gmail.com</a></p>
+      </div>
+
+      
+      <div class="toc-toggle" onclick="toggleTOC()">☰</div>
+
+      
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <hr/>
+
+<aside class="toc sticky">
+  <nav id="TableOfContents"></nav>
+</aside>
+
+<div class="outer-wrapper">
+  
+  <div class="body-container">
+    <div class="article-meta">
+      <h1><span class="title">All Praise to You</span></h1>
+      <h2 class="date">2024/11/16</h2>
+    </div>
+
+    <div class="content">
+      <p>O Lord, how majestic is Your name in all the earth! You are the Creator of the heavens and the earth, the One who spoke light into existence with a simple word. By Your breath, the stars were flung into the expanse, each one declaring Your glory and craftsmanship. You are the Alpha and the Omega, the beginning and the end, the Starter and the Finisher, the Eternal One who transcends time and space. Before the mountains were brought forth, before the seas roared their priase, You were God, enthroned in majesty, clother in light, and surrounded by the unending chorus of heavenly beings who shout, &ldquo;Holy, holy, holy is the Lord God Almighty; the whole earth is full of His glory!&rdquo;</p>
+<p>Who is like You, O Sovereign Lord? Your power is limitless, and Your wisdom is unsearchable. You hold the universe in the palm of Your hand, and yet You stoop to hear the prayers of the lowly. You are the King of kings and the Lord of lords, the Righteous Judge, and the Merciful Redeemer. Your love is as vast as the ocean, deeper than the depths of the sea, and higher than the heavens above. By Your grace, we are sustained; by Your mercy. we are forgiven. You alone are worthy of all praise, honor, and glory, for there is none beside You.</p>
+<p>Mighty God, Your beauty surpasses all we could ever imagine. The colors of the sunset, the grandeur of the mountains, the delicate whisper of the wind—all these are but a shadow of Your splendor. Your faithfulness endures through all generations; Your promises are steadfast and true. You are a refuge for the weary, a fortress for the oppressed, a Father to the fatherless. In you, we find hope that does not disappoint, a peace that surpasses understanding, and a joy that cannot be contained.</p>
+<p>You are exalted, O Lord, for Your greatness is unsearchable, and Your glory fills the heavens. You are the Lamb who was slain, the One who defeated sin and death, the Resurrected Savior who reigns forevermore. Yours is the kingdom and the power and the glory forever and ever. Let the nations tremble before You, let the peoples rejoice in You, and let every tongue confess that You are Lord, to the glory of God the Father. Amen!</p>
+
+    </div>
+  </div>
+</div>
+
+  <footer>
+  
+  
+  </footer>
+  </body>
+</html>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocLinks = document.querySelectorAll(".toc a");
+    const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
+    const toc = document.querySelector('.toc');
+    const tocToggle = document.querySelector('.toc-toggle');
+
+    
+    function toggleTOC() {
+      if (toc) {
+        toc.classList.toggle('show');
+      }
+    }
+
+    
+    if (tocToggle) {
+      tocToggle.addEventListener("click", toggleTOC);
+    }
+
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        
+        entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
+
+        for (const entry of entries) {
+          const index = sections.indexOf(entry.target);
+          if (entry.isIntersecting) {
+            tocLinks.forEach((link) => link.classList.remove("active"));
+            if (tocLinks[index]) tocLinks[index].classList.add("active");
+            break; 
+          }
+        }
+      },
+      { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    
+    window.addEventListener("scroll", () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+        tocLinks.forEach((link) => link.classList.remove("active"));
+        tocLinks[tocLinks.length - 1].classList.add("active"); 
+      }
+    });
+
+    
+    tocLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 20, 
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+</script>
+
+  
