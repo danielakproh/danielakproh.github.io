@@ -242,7 +242,7 @@ blockquote {
 /* TOC styling */
 .toc {
   position: fixed;
-  left: calc((100vw - 900px) / 2 - 200px); /* Dynamically position TOC based on viewport */
+  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC based on viewport */
   top: 20px;
   width: 200px;
   padding: 10px;
