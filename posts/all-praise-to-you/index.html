@@ -105,65 +105,39 @@
 
 
 
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toc = document.querySelector('.toc');
-    const tocLinks = toc ? toc.querySelectorAll("a") : [];
-    const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
-
-    
-    if (toc && (!toc.querySelector('ul') || toc.querySelector('ul').children.length === 0)) {
-      toc.style.display = 'none';
-    }
-
-    
-    if (tocLinks.length > 0) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          
-          entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
-
-          for (const entry of entries) {
-            const index = sections.indexOf(entry.target);
-            if (entry.isIntersecting) {
-              tocLinks.forEach((link) => link.classList.remove("active"));
-              if (tocLinks[index]) tocLinks[index].classList.add("active");
-              break; 
-            }
-          }
-        },
-        { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
-      );
-
-      sections.forEach((section) => observer.observe(section));
-    }
-
-    
-    window.addEventListener("scroll", () => {
-      if (toc && window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-        tocLinks.forEach((link) => link.classList.remove("active"));
-        if (tocLinks.length > 0) {
-          tocLinks[tocLinks.length - 1].classList.add("active"); 
-        }
-      }
-    });
+    const tocLinks = document.querySelectorAll(".toc a");
 
     
     tocLinks.forEach(link => {
       link.addEventListener("click", function (e) {
         e.preventDefault();
+
         const targetId = this.getAttribute("href").substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 20, 
-            behavior: "smooth"
+          
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
           });
+
+          
+          tocLinks.forEach(link => link.classList.remove("active"));
+          this.classList.add("active");
         }
       });
     });
   });
 </script>
+
+
+
+
+
 
   

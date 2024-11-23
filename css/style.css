@@ -26,34 +26,64 @@ em {
 /* TOC styling */
 .toc {
   position: fixed;
-  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC based on viewport */
+  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC */
   top: 20px;
-  width: 200px;
+  width: 220px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background: #f9f9f9;
-  max-height: calc(100vh - 40px); /* Ensure it stays within viewport height */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  color: #333;
+  max-height: calc(100vh - 40px); /* Ensure it doesn't exceed viewport height */
   overflow-y: auto;
   z-index: 1000;
-  display: block; /* Default for larger screens */
 }
 
+/* TOC List Style */
 .toc ul {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.toc a {
-  text-decoration: none;
-  color: #007bff;
+/* Different Levels of Indentation for Headings */
+.toc ul li {
+  margin-left: 0; /* Level 1 headings */
 }
 
+.toc ul li ul li {
+  margin-left: 15px; /* Level 2 headings */
+}
+
+.toc ul li ul li ul li {
+  margin-left: 30px; /* Level 3 headings */
+}
+
+/* TOC Links */
+.toc a {
+  text-decoration: none;
+  display: block;
+  padding: 1px 0px;
+  border-radius: 5px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* TOC Hover Effect */
+.toc a:hover {
+  color: #666;
+  background: #f2f2f2; /* Light grey background on hover */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Active TOC Link */
 .toc a.active {
+  color: #000; /* Darker color for the active link */
+  background: #f2f2f2;
   font-weight: bold;
-  color: #0056b3;
-  border-left: 3px solid #007bff;
-  padding-left: 5px;
+  transition: all 0.3s ease; /* Smooth active transition */
 }
 
 /* Article meta information */

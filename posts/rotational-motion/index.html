@@ -63,8 +63,12 @@
 <aside class="toc sticky">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-an-angle">What is an Angle?</a></li>
-    <li><a href="#degrees-vs-radians">Degrees vs Radians</a></li>
+    <li><a href="#i-what-is-an-angle">I. What is an Angle?</a>
+      <ul>
+        <li><a href="#1-setup-scenario">1. Setup scenario</a></li>
+        <li><a href="#2-degrees-vs-radians">2. Degrees vs Radians</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </aside>
@@ -79,21 +83,22 @@
       <p class="date">Written on 20th of November, 2024</p>
       
         
-        <p class="intro">Many terms in Physics sound the similar but mean different things due to the subtleties. After the study of linear motion and the familiarization to Newton&#39;s various laws of inertia, I want to take the time to decorticate rotational motion, clarifying the nuances in the jargon and establishing a solid foundation that will equip us for more advanced speculations.</p>
+        <p class="intro">Many terms in Physics sound similar but mean different things due to the subtleties. After the study of linear motion and the familiarization to Newton&#39;s various laws of inertia, I want to take the time to decorticate rotational motion, clarifying the nuances in the jargon and establishing a solid foundation that will equip us for more advanced speculations.</p>
         
       <hr style="margin: 2em auto; max-width: 40%;">
     </div>
 
     
     <div class="content">
-      <h2 id="what-is-an-angle">What is an Angle?</h2>
+      <h2 id="i-what-is-an-angle">I. What is an Angle?</h2>
 <p>Before we tackle rotation, we first need to understand its elementary foundation which is an <em>angle</em>. An angle is a portion of a circle. &ldquo;Measuring an angle&rdquo; is assigning a value to that <em>circular portion</em>. The thing is, an angle does not appear magically though, it starts somewhere-just like anything in life has a beginning and also an end.</p>
+<h3 id="1-setup-scenario">1. Setup scenario</h3>
 <p>Let&rsquo;s say you decide to take a walk on a circle. You will first stand at a particular spot, then start walking. Let&rsquo;s call that starting point A. As you start walking, you realize that you need a break and stop for a second-this is position B&mdash;that&rsquo;s our position B.</p>
 <blockquote>
 <p style="all:unset">We then define angle \(\theta\), the portion of the circle you walked from A to B.</p>
 </blockquote>
 <p><img src="/diagrams/rotational-motion/angle-definition.svg" alt="Angle Definition"></p>
-<h2 id="degrees-vs-radians">Degrees vs Radians</h2>
+<h3 id="2-degrees-vs-radians">2. Degrees vs Radians</h3>
 <p>Angles can be expressed in either degrees or radians. Which one is better is context-depend. Usually we use degrees to have an intuitive feel for the angle we&rsquo;re describing in contrast to radians which is convenient for formula derivation and to avoid bulky numbers through the use of \(\pi\).</p>
 <blockquote>
 <p style="all:unset">One <em>revolution</em>&mdash;or a full circle is 360° which is equivalent to \(2\pi\).</p>
@@ -118,65 +123,39 @@
 
 
 
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toc = document.querySelector('.toc');
-    const tocLinks = toc ? toc.querySelectorAll("a") : [];
-    const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute("href")));
-
-    
-    if (toc && (!toc.querySelector('ul') || toc.querySelector('ul').children.length === 0)) {
-      toc.style.display = 'none';
-    }
-
-    
-    if (tocLinks.length > 0) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          
-          entries.sort((a, b) => a.intersectionRatio < b.intersectionRatio ? 1 : -1);
-
-          for (const entry of entries) {
-            const index = sections.indexOf(entry.target);
-            if (entry.isIntersecting) {
-              tocLinks.forEach((link) => link.classList.remove("active"));
-              if (tocLinks[index]) tocLinks[index].classList.add("active");
-              break; 
-            }
-          }
-        },
-        { rootMargin: "0px 0px -40% 0px", threshold: 0.75 } 
-      );
-
-      sections.forEach((section) => observer.observe(section));
-    }
-
-    
-    window.addEventListener("scroll", () => {
-      if (toc && window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-        tocLinks.forEach((link) => link.classList.remove("active"));
-        if (tocLinks.length > 0) {
-          tocLinks[tocLinks.length - 1].classList.add("active"); 
-        }
-      }
-    });
+    const tocLinks = document.querySelectorAll(".toc a");
 
     
     tocLinks.forEach(link => {
       link.addEventListener("click", function (e) {
         e.preventDefault();
+
         const targetId = this.getAttribute("href").substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 20, 
-            behavior: "smooth"
+          
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
           });
+
+          
+          tocLinks.forEach(link => link.classList.remove("active"));
+          this.classList.add("active");
         }
       });
     });
   });
 </script>
+
+
+
+
+
 
   
