@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2024-11-20T12:36:29-05:00</lastmod>
+    <loc>//localhost:1313/posts/song-of-degrees-133/</loc>
+    <lastmod>2024-11-24T00:15:48-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/rotational-motion/</loc>
-    <lastmod>2024-11-20T12:36:29-05:00</lastmod>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2024-11-24T00:15:48-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
+    <lastmod>2024-11-24T00:15:48-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/rotational-motion/</loc>
     <lastmod>2024-11-20T12:36:29-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/i-wil-love-thee/</loc>
@@ -16,6 +19,9 @@
   </url><url>
     <loc>//localhost:1313/posts/all-praise-to-you/</loc>
     <lastmod>2024-11-16T20:51:34-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/test/</loc>
+    <lastmod>2024-11-14T14:23:00-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>

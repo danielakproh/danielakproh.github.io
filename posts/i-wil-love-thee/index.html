@@ -110,12 +110,13 @@ I will call upon the LORD, <em>who is worthy</em> to be praised: so shall I be s
 
 
 
-
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const tocLinks = document.querySelectorAll(".toc a");
+    const sections = Array.from(tocLinks).map(link => {
+      const targetId = link.getAttribute("href").substring(1);
+      return document.getElementById(targetId);
+    });
 
     
     tocLinks.forEach(link => {
@@ -137,6 +138,52 @@ I will call upon the LORD, <em>who is worthy</em> to be praised: so shall I be s
           this.classList.add("active");
         }
       });
+    });
+
+    
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            const targetId = entry.target.id;
+            const activeLink = Array.from(tocLinks).find(link => link.getAttribute("href").substring(1) === targetId);
+
+            if (activeLink) {
+              tocLinks.forEach(link => link.classList.remove("active"));
+              activeLink.classList.add("active");
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -50% 0px", 
+        threshold: 0.5 
+      }
+    );
+
+    
+    sections.forEach(section => {
+      if (section) observer.observe(section);
+    });
+
+    
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+
+      
+      if (scrollTop === 0) {
+        tocLinks.forEach(link => link.classList.remove("active"));
+        return;
+      }
+
+      
+      if (window.innerHeight + scrollTop >= document.body.offsetHeight - 5) {
+        tocLinks.forEach(link => link.classList.remove("active"));
+        if (tocLinks.length > 0) {
+          tocLinks[tocLinks.length - 1].classList.add("active");
+        }
+      }
     });
   });
 </script>

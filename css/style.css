@@ -271,36 +271,24 @@ blockquote {
 
 /* Drop Cap for Content */
 .content p:first-of-type::first-letter {
-  font-size: 2.8em;
-  font-family: 'Great Vibes', cursive;
-  font-weight: bold;
-  line-height: 1;
-  vertical-align: top; /* Ensures top of the drop cap aligns with text */
-  float: left;
-  margin-right: 0.4em;
-  margin-top: 0.1em; 
+  margin-top: 0.3em; 
   padding-left: 0.05em;
-  color: #333;
   overflow: visible;
-}
-
-.content p:first-of-type::first-letter {
-  font-family: "Great Vibes", cursive; /* Or your preferred calligraphic font */
-  font-size: 4em; /* Adjust as necessary */
+  font-family: "Great Vibes", cursive;
+  font-size: 4em;
   font-weight: normal;
   float: left;
-  line-height: 0.4; /* Reduce the line height slightly to remove extra spacing */
+  line-height: 0.4;
   margin-right: 0.2em;
-   /* Push it slightly down if needed */
-  vertical-align: top; /* Align the top of the letter with the first line */
+  vertical-align: top;
   color: #333;
 }
 
 /* Navigation Menu Styling */
 nav .menu {
-  display: flex; /* Arrange items in a row */
-  justify-content: center; /* Center-align menu items */
-  list-style: none; /* Remove bullet points */
+  display: flex;
+  justify-content: center;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
