@@ -65,7 +65,7 @@
   <ul>
     <li><a href="#i-what-is-an-angle">I. What is an Angle?</a>
       <ul>
-        <li><a href="#1-setup-scenario">1. Setup scenario</a></li>
+        <li><a href="#1-setup-scenario">1. Setup Scenario</a></li>
         <li><a href="#2-degrees-vs-radians">2. Degrees vs Radians</a></li>
       </ul>
     </li>
@@ -92,16 +92,17 @@
     <div class="content">
       <h2 id="i-what-is-an-angle">I. What is an Angle?</h2>
 <p>Before we tackle rotation, we first need to understand its elementary foundation which is an <em>angle</em>. An angle is a portion of a circle. &ldquo;Measuring an angle&rdquo; is assigning a value to that <em>circular portion</em>. The thing is, an angle does not appear magically though, it starts somewhere-just like anything in life has a beginning and also an end.</p>
-<h3 id="1-setup-scenario">1. Setup scenario</h3>
+<h3 id="1-setup-scenario">1. Setup Scenario</h3>
 <p>Let&rsquo;s say you decide to take a walk on a circle. You will first stand at a particular spot, then start walking. Let&rsquo;s call that starting point A. As you start walking, you realize that you need a break and stop for a second-this is position B&mdash;that&rsquo;s our position B.</p>
-<blockquote>
-<p style="all:unset">We then define angle \(\theta\), the portion of the circle you walked from A to B.</p>
-</blockquote>
 <p><img src="/diagrams/rotational-motion/angle-definition.svg" alt="Angle Definition"></p>
+<blockquote>
+<p><strong>Definition</strong></p>
+<p style="all: unset;">We then define angle \(\theta\), the portion of the circle you walked from A to B.</p>
+</blockquote>
 <h3 id="2-degrees-vs-radians">2. Degrees vs Radians</h3>
 <p>Angles can be expressed in either degrees or radians. Which one is better is context-depend. Usually we use degrees to have an intuitive feel for the angle we&rsquo;re describing in contrast to radians which is convenient for formula derivation and to avoid bulky numbers through the use of \(\pi\).</p>
 <blockquote>
-<p style="all:unset">One <em>revolution</em>&mdash;or a full circle is 360° which is equivalent to \(2\pi\).</p>
+<p style="all: unset;">One <em>revolution</em>&mdash;or a full circle is 360° which is equivalent to \(2\pi\).</p>
 </blockquote>
 
     </div>
@@ -122,12 +123,13 @@
 
 
 
-
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const tocLinks = document.querySelectorAll(".toc a");
+    const sections = Array.from(tocLinks).map(link => {
+      const targetId = link.getAttribute("href").substring(1);
+      return document.getElementById(targetId);
+    });
 
     
     tocLinks.forEach(link => {
@@ -149,6 +151,52 @@
           this.classList.add("active");
         }
       });
+    });
+
+    
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            
+            const targetId = entry.target.id;
+            const activeLink = Array.from(tocLinks).find(link => link.getAttribute("href").substring(1) === targetId);
+
+            if (activeLink) {
+              tocLinks.forEach(link => link.classList.remove("active"));
+              activeLink.classList.add("active");
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -50% 0px", 
+        threshold: 0.5 
+      }
+    );
+
+    
+    sections.forEach(section => {
+      if (section) observer.observe(section);
+    });
+
+    
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+
+      
+      if (scrollTop === 0) {
+        tocLinks.forEach(link => link.classList.remove("active"));
+        return;
+      }
+
+      
+      if (window.innerHeight + scrollTop >= document.body.offsetHeight - 5) {
+        tocLinks.forEach(link => link.classList.remove("active"));
+        if (tocLinks.length > 0) {
+          tocLinks[tocLinks.length - 1].classList.add("active");
+        }
+      }
     });
   });
 </script>

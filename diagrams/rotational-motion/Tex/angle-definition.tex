@@ -11,21 +11,25 @@
     % Mark the center
     \filldraw[black] (0,0) circle (0.03);
     
-    % Draw the radius
+    % Draw the radius to A
     \draw[thick,->] (0,0) -- (1,0) coordinate (A);
     
-    % Draw an arc for the angle
+    % Draw the radius to B
     \draw[thick,->] (0,0) -- ({cos(60)},{sin(60)}) coordinate (B);
     
-    % Draw the arc with an animation
-    \draw[domain=0:60,samples=50,smooth,variable=\t,very thick,blue] 
-         plot ({cos(\t)},{sin(\t)});
+    % Fill the smaller pie slice
+    \fill[blue!30,opacity=0.5] 
+        (0.5,0) -- (0,0) -- ({0.5*cos(60)},{0.5*sin(60)}) 
+        arc [start angle=60, end angle=0, radius=0.5] -- cycle;
     
-    % Label the angle
-    \node[below right] at (0.2,0.1) {$\theta$};
+    % Draw the arc for the angle
+    \draw[very thick,blue] (1,0) arc [start angle=0, end angle=60, radius=1];
+    
+    % Label the angle, adjusted to avoid overlap
+    \node[above right] at (0.1,0.02) {$\theta$};
     
     % Add the points A and B
-    \node[below] at (1,0) {A};
+    \node[below] at (1.15,0) {A};
     \node[above right] at ({cos(60)},{sin(60)}) {B};
 \end{tikzpicture}
 
