@@ -6,8 +6,15 @@
     <description>Recent content on Words of Praise</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2024 00:15:48 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2024 15:26:07 -0500</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chord Rendering</title>
+      <link>//localhost:1313/posts/chord-rendering/</link>
+      <pubDate>Tue, 26 Nov 2024 15:26:07 -0500</pubDate>
+      <guid>//localhost:1313/posts/chord-rendering/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/diagrams/chord-rendering/test-staff.jpg&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/diagrams/chord-rendering/test-staff.gif&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How Pleasant it is to Dwell Together in Unity!</title>
       <link>//localhost:1313/posts/song-of-degrees-133/</link>
