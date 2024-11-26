@@ -85,6 +85,10 @@
 <p><img src="/diagrams/chord-rendering/test-staff.gif" alt="Notes"></p>
 
     </div>
+
+    <div class="vexbox">
+      <div id="boo"></div>
+    </div>
   </div>
 </div>
 
@@ -100,7 +104,15 @@
   </body>
 </html>
 
-
+<style>
+.vexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -189,47 +201,19 @@
 <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
 <script>
   // Write out some VexTab notation
-// Your VexTab and VexFlow code
-const tab = `
-      tabstave notation=true key=A time=4/4
+tab = `
+  tabstave notation=true key=A time=4/4
 
-      notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
-      notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :q p5/4
-      text :w, |#segno, ,|, :hd, , #tr
-    `;
+  notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
+  notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :q p5/4
+  text :w, |#segno, ,|, :hd, , #tr
+`
 
-    // Initialize VexFlow Renderer
-    const VF = Vex.Flow;
-    const renderer = new VF.Renderer(
-      document.getElementById("boo"), // Element where it will render
-      VF.Renderer.Backends.SVG // Use SVG for rendering
-    );
-
-    // Set size for the SVG canvas
-    renderer.resize(800, 300);
-
-    // Get the rendering context
-    const context = renderer.getContext();
-
-    // Create the tab stave
-    const stave = new VF.TabStave(10, 40, 750); // x, y, width
-    stave.addClef("treble").addKeySignature("A");
-    stave.setContext(context).draw();
-
-    // Parse and render tab notes
-    const tabNotes = [
-      new VF.TabNote({
-        positions: [
-          { str: 4, fret: 7 },
-          { str: 3, fret: 5 },
-          { str: 2, fret: 5 },
-        ],
-        duration: "q",
-      }),
-    ];
-
-    // Add notes to the renderer
-    VF.Formatter.FormatAndDraw(context, stave, tabNotes);
+// Create VexFlow Renderer element with id #boo.
+renderer = new Vex.Flow.Renderer($('#boo')[0], Vex.Flow.Renderer.Backends.SVG);
+artist = new Artist(10, 30, 800, {scale: 0.7});
+new VexTab(artist).parse(tab)
+artist.render(renderer);
 </script>
 
 
