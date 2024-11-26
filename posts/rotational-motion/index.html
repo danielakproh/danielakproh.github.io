@@ -125,11 +125,17 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const tocLinks = document.querySelectorAll(".toc a");
+    const toc = document.querySelector(".toc"); 
+    const tocLinks = toc ? toc.querySelectorAll("a") : [];
     const sections = Array.from(tocLinks).map(link => {
       const targetId = link.getAttribute("href").substring(1);
       return document.getElementById(targetId);
     });
+
+    
+    if (toc && tocLinks.length === 0) {
+      toc.style.display = "none";
+    }
 
     
     tocLinks.forEach(link => {
@@ -200,6 +206,7 @@
     });
   });
 </script>
+
 
 
 
