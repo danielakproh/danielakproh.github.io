@@ -316,6 +316,18 @@ nav .menu a:hover {
   text-decoration: underline; /* Optional: Underline for hover */
 }
 
-.no-drop-cap::first-letter {
-  all: unset;
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
 }
+
+.site-logo {
+  top: 20px;
+  width: 50%; /* Adjust size as needed */
+  height: auto;
+  display: block;
+}
+
+
