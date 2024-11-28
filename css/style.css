@@ -270,7 +270,7 @@ blockquote {
 }
 
 /* Drop Cap for Content */
-.content p:first-of-type::first-letter {
+.drop-cap p:first-of-type::first-letter {
   margin-top: 0.3em; 
   padding-left: 0.05em;
   overflow: visible;
@@ -282,6 +282,10 @@ blockquote {
   margin-right: 0.2em;
   vertical-align: top;
   color: #333;
+}
+
+.no-drop-cap{
+  all: unset;
 }
 
 /* Navigation Menu Styling */
@@ -330,4 +334,132 @@ nav .menu a:hover {
   display: block;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px 0;
+}
 
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.resources-box {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 30px;
+  font-family: 'Georgia', serif;
+}
+
+.resources-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.resource-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.resource-item a {
+  font-family: 'Georgia', serif;
+  font-size: 1.1em;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.resource-item a:hover {
+  text-decoration: underline;
+}
+
+.definition {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.definition h3 {
+  font-family: "Inter";
+  font-size: inherit;
+  margin: 7px;
+  font-weight: bold;
+}
+
+.definition p {
+  margin-left: 7px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate; /* Separate borders for better styling */
+  border-spacing: 0; /* Remove extra spacing between cells */
+  margin: 20px 0; /* Add spacing from other elements */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Ensures corners are properly rounded */
+  /* font-family: 'Georgia', serif; Matches your book-y theme */
+  font-size: 1em;
+  text-align: left; /* Left-align content */
+}
+
+/* Table Header */
+table thead th {
+  background: #e9e9e9; /* Subtle contrast for header */
+  font-weight: bold; /* Highlight header */
+  padding: 10px; /* Add spacing */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table Rows */
+table tbody tr {
+  border-bottom: 1px solid #ddd; /* Subtle row separation */
+}
+
+table tbody tr:nth-child(even) {
+  background: #eeeded; /* Alternate row shading */
+}
+
+table tbody tr:hover {
+  background: #e9e9e9; /* Highlight row on hover */
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+/* Table Data Cells */
+table tbody td {
+  padding: 10px; /* Add spacing to content */
+}
+
+/* Last Row with Border */
+table tbody tr:last-child {
+  border-bottom: none; /* Remove border for last row */
+}
+
+table img {
+  width: 17px; /* Adjust the width as necessary */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 8px; /* Add spacing between the icon and text */
+  vertical-align: -4px;
+}
