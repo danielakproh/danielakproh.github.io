@@ -5,6 +5,9 @@ body {
   padding: 1em;
   line-height: 1.5;
   font-size: 1.2em;
+  background: #ffffff url('/img/paper-texture6.jpg') repeat;
+  background-blend-mode: multiply; /* Blend the image with the background color */
+  background-size: 400px 400px; /* Scale for subtle repetitions */
 }
 
 em {
@@ -224,6 +227,32 @@ main {
   hyphens: auto;
 }
 
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  margin: 0.5em 0;
+}
+
+main ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+main ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+main ul li small {
+  color: #666;
+  font-size: 0.9em;
+}
+
+
 blockquote {
   background: #f9f9f9;
   border-left: 5px solid #ccc;
@@ -329,7 +358,7 @@ nav .menu a:hover {
 
 .site-logo {
   top: 20px;
-  width: 50%; /* Adjust size as needed */
+  width: 90%; /* Adjust size as needed */
   height: auto;
   display: block;
 }
@@ -460,6 +489,6 @@ table tbody tr:last-child {
 table img {
   width: 17px; /* Adjust the width as necessary */
   height: auto; /* Maintain the aspect ratio */
-  margin-right: 8px; /* Add spacing between the icon and text */
+  margin-right: 3px; /* Add spacing between the icon and text */
   vertical-align: -4px;
 }
