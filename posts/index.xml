@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Words of Praise</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2024 15:26:07 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2024 22:46:53 -0500</lastBuildDate>
     <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All Things Bright and Beautifull</title>
+      <link>//localhost:1313/posts/all-things-bright-and-beautifull/</link>
+      <pubDate>Thu, 28 Nov 2024 22:46:53 -0500</pubDate>
+      <guid>//localhost:1313/posts/all-things-bright-and-beautifull/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Orsay Mathematics</title>
+      <link>//localhost:1313/posts/orsay-mathematics/</link>
+      <pubDate>Wed, 27 Nov 2024 08:54:59 -0500</pubDate>
+      <guid>//localhost:1313/posts/orsay-mathematics/</guid>
+      <description>&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;&#xA;&lt;div class=&#34;problem-statement&#34;&gt;&#xA;Here is the problem statement:&#xA;$$ \int_0^1 \frac{\ln(x)}{1+x^2} \, dx $$&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-highlights&#34;&gt;Solution Highlights&lt;/h2&gt;&#xA;&lt;div class=&#34;no-drop-cap&#34;&gt; &lt;p&gt;We solve this problem using advanced &#xA;calculus techniques:&lt;/p&gt;&lt;/div&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Substitution&lt;/li&gt;&#xA;&lt;li&gt;Integration by parts&lt;/li&gt;&#xA;&lt;li&gt;Series expansion&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;For the full step-by-step solution, download the write-up below or watch the video explanation! but it shjd jsodk nsdk hclksdc nsdij  spodjpjp&lt;/p&gt;&#xA;&lt;div class=&#34;definition&#34;&gt;&#xA;&lt;h3&gt;Big idea&lt;/h3&gt;&#xA;&lt;p class=&#34;no-drop-cap&#34;&gt;We have a lot to say about this and this is the place designated for that.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;h2 id=&#34;styled-table-example&#34;&gt;Styled Table Example&lt;/h2&gt;&#xA;&lt;p&gt;Here is a table styled with the updated theme:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Chord Rendering</title>
       <link>//localhost:1313/posts/chord-rendering/</link>
