@@ -331,10 +331,15 @@ nav .menu li {
 }
 
 nav .menu a {
-  font-family: inherit;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-family: 'Georgia', serif; /* Formal serif font */
+  font-size: 1.1em; /* Slightly larger font size */
   color: #333; /* Neutral dark color */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 15px; /* Add padding for button-like appearance */
+  border: 1px solid #ddd; /* Light border for structure */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #f9f9f9; /* Neutral light background */
+  transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 nav .menu a:hover {
@@ -342,7 +347,6 @@ nav .menu a:hover {
   border-color: #bbb; /* Slightly darker border on hover */
   background-color: #e9e9e9; /* Slightly darker background on hover */
   text-decoration: underline; /* Optional: Underline for hover */
-
 }
 
 .logo-container {
