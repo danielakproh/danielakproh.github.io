@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/posts/christianity/</loc>
+    <loc>//localhost:1313/faith/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2024-12-03T15:33:32-05:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/christianity/the-lord-is-my-rock/</loc>
+    <loc>//localhost:1313/faith/the-lord-is-my-rock/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/music/</loc>
+    <lastmod>2024-11-28T22:46:53-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2024-11-28T22:46:53-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/music/royal-oak-all-things-bright-and-beautiful/</loc>
@@ -35,16 +35,16 @@
     <loc>//localhost:1313/posts/music/chord-rendering/</loc>
     <lastmod>2024-11-26T15:26:07-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/christianity/how-pleasant-it-is-to-dwell-together-in-unity/</loc>
+    <loc>//localhost:1313/faith/song-of-degrees-133/</loc>
     <lastmod>2024-11-24T00:15:48-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/rotational-motion-movement-in-circle/</loc>
     <lastmod>2024-11-20T12:36:29-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/christianity/i-will-love-thee/</loc>
+    <loc>//localhost:1313/faith/i-wil-love-thee/</loc>
     <lastmod>2024-11-19T08:34:55-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/christianity/all-praise-to-you-o-lord/</loc>
+    <loc>//localhost:1313/faith/all-praise-to-you/</loc>
     <lastmod>2024-11-16T20:51:34-05:00</lastmod>
   </url><url>
     <loc>//localhost:1313/home/</loc>
