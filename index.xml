@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Words of Praise</title>
-    <link>//localhost:1313/</link>
+    <link>danielakproh.github.io/</link>
     <description>Recent content on Words of Praise</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Dec 2024 15:33:32 -0500</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="danielakproh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The LORD Is My Rock</title>
-      <link>//localhost:1313/faith/the-lord-is-my-rock/</link>
+      <link>danielakproh.github.io/faith/the-lord-is-my-rock/</link>
       <pubDate>Tue, 03 Dec 2024 15:33:32 -0500</pubDate>
-      <guid>//localhost:1313/faith/the-lord-is-my-rock/</guid>
+      <guid>danielakproh.github.io/faith/the-lord-is-my-rock/</guid>
       <description>&lt;p&gt;I love you, LORD, my strength.&lt;/p&gt;&#xA;&lt;p&gt;The LORD is my rock, my fortress and my deliverer; my God is my rock, in whom I take refuge, my shield and the horn of my salvation, my stronghold.&#xA;I called to the LORD, who is worthy of praise, and I have been saved from my enemies. The cords of death entangled me; the torrents of destruction overwhelmed me. The cords of the grave coiled around me; the snares of death confronted me.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Royal Oak &#34;All Things Bright and Beautiful&#34;</title>
-      <link>//localhost:1313/posts/music/royal-oak-all-things-bright-and-beautiful/</link>
+      <link>danielakproh.github.io/posts/music/royal-oak-all-things-bright-and-beautiful/</link>
       <pubDate>Thu, 28 Nov 2024 22:46:53 -0500</pubDate>
-      <guid>//localhost:1313/posts/music/royal-oak-all-things-bright-and-beautiful/</guid>
+      <guid>danielakproh.github.io/posts/music/royal-oak-all-things-bright-and-beautiful/</guid>
       <description>&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Resource&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Link&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Original Transcription&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg&#34; alt=&#34;PDF Icon&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://github.com/danielakproh/music-transcriptions/blob/master/Hymns/pdf/All%20Things%20Bright%20and%20Beautiful%20(Royal%20Oak).pdf&#34;&gt;Score&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;My arrangement&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg&#34; alt=&#34;PDF Icon&#34;&gt; &lt;a href=&#34;&#34;&gt;Score&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
     <item>
       <title>Orsay Mathematics</title>
-      <link>//localhost:1313/posts/math/orsay-mathematics/</link>
+      <link>danielakproh.github.io/posts/math/orsay-mathematics/</link>
       <pubDate>Wed, 27 Nov 2024 08:54:59 -0500</pubDate>
-      <guid>//localhost:1313/posts/math/orsay-mathematics/</guid>
+      <guid>danielakproh.github.io/posts/math/orsay-mathematics/</guid>
       <description>&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;&#xA;&lt;div class=&#34;problem-statement&#34;&gt;&#xA;Here is the problem statement:&#xA;$$ \int_0^1 \frac{\ln(x)}{1+x^2} \, dx $$&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;solution-highlights&#34;&gt;Solution Highlights&lt;/h2&gt;&#xA;&lt;div class=&#34;no-drop-cap&#34;&gt; &lt;p&gt;We solve this problem using advanced &#xA;calculus techniques:&lt;/p&gt;&lt;/div&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Substitution&lt;/li&gt;&#xA;&lt;li&gt;Integration by parts&lt;/li&gt;&#xA;&lt;li&gt;Series expansion&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;For the full step-by-step solution, download the write-up below or watch the video explanation! but it shjd jsodk nsdk hclksdc nsdij  spodjpjp&lt;/p&gt;&#xA;&lt;div class=&#34;definition&#34;&gt;&#xA;&lt;h3&gt;Big idea&lt;/h3&gt;&#xA;&lt;p class=&#34;no-drop-cap&#34;&gt;We have a lot to say about this and this is the place designated for that.&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;h2 id=&#34;styled-table-example&#34;&gt;Styled Table Example&lt;/h2&gt;&#xA;&lt;p&gt;Here is a table styled with the updated theme:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chord Rendering</title>
-      <link>//localhost:1313/posts/music/chord-rendering/</link>
+      <link>danielakproh.github.io/posts/music/chord-rendering/</link>
       <pubDate>Tue, 26 Nov 2024 15:26:07 -0500</pubDate>
-      <guid>//localhost:1313/posts/music/chord-rendering/</guid>
-      <description>&lt;p&gt;hjhjkkjbkjbkbk&#xA;&lt;img src=&#34;//localhost:1313/diagrams/chord-rendering/chord-rendering.svg&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/diagrams/chord-rendering/test-staff.gif&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;</description>
+      <guid>danielakproh.github.io/posts/music/chord-rendering/</guid>
+      <description>&lt;p&gt;hjhjkkjbkjbkbk&#xA;&lt;img src=&#34;danielakproh.github.io/diagrams/chord-rendering/chord-rendering.svg&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;danielakproh.github.io/diagrams/chord-rendering/test-staff.gif&#34; alt=&#34;Notes&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How Pleasant it is to Dwell Together in Unity!</title>
-      <link>//localhost:1313/faith/song-of-degrees-133/</link>
+      <link>danielakproh.github.io/faith/song-of-degrees-133/</link>
       <pubDate>Sun, 24 Nov 2024 00:15:48 -0500</pubDate>
-      <guid>//localhost:1313/faith/song-of-degrees-133/</guid>
+      <guid>danielakproh.github.io/faith/song-of-degrees-133/</guid>
       <description>&lt;p&gt;BEHOLD, how good and how pleasant &lt;em&gt;it is&lt;/em&gt; for brethren to dwell together in unity! &lt;em&gt;it is&lt;/em&gt; like the precious ointment upon the head, that ran down upon the beard, &lt;em&gt;even&lt;/em&gt; Aaron&amp;rsquo;s beard: that went down to the skirts of his garments; as the dew of Hermon, &lt;em&gt;and as the dew&lt;/em&gt; that descended upon the mountains of Zion: for there the LORD commanded the blessing, &lt;em&gt;even&lt;/em&gt; life for evermore.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rotational Motion: Movement in Circle</title>
-      <link>//localhost:1313/posts/rotational-motion-movement-in-circle/</link>
+      <link>danielakproh.github.io/posts/rotational-motion-movement-in-circle/</link>
       <pubDate>Wed, 20 Nov 2024 12:36:29 -0500</pubDate>
-      <guid>//localhost:1313/posts/rotational-motion-movement-in-circle/</guid>
+      <guid>danielakproh.github.io/posts/rotational-motion-movement-in-circle/</guid>
       <description>&lt;h2 id=&#34;i-what-is-an-angle&#34;&gt;I. What is an Angle?&lt;/h2&gt;&#xA;&lt;p&gt;Before we tackle rotation, we first need to understand its elementary foundation which is an &lt;em&gt;angle&lt;/em&gt;. An angle is a portion of a circle. &amp;ldquo;Measuring an angle&amp;rdquo; is assigning a value to that &lt;em&gt;circular portion&lt;/em&gt;. The thing is, an angle does not appear magically though, it starts somewhere-just like anything in life has a beginning and also an end.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-setup-scenario&#34;&gt;1. Setup Scenario&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s say you decide to take a walk on a circle. You will first stand at a particular spot, then start walking. Let&amp;rsquo;s call that starting point A. As you start walking, you realize that you need a break and stop for a second-this is position B&amp;mdash;that&amp;rsquo;s our position B.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I Will Love Thee</title>
-      <link>//localhost:1313/faith/i-wil-love-thee/</link>
+      <link>danielakproh.github.io/faith/i-wil-love-thee/</link>
       <pubDate>Tue, 19 Nov 2024 08:34:55 -0500</pubDate>
-      <guid>//localhost:1313/faith/i-wil-love-thee/</guid>
+      <guid>danielakproh.github.io/faith/i-wil-love-thee/</guid>
       <description>&lt;p&gt;I Will love thee, O LORD, my strength. The LORD &lt;em&gt;is&lt;/em&gt; my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, &lt;em&gt;and&lt;/em&gt; my high tower.&#xA;I will call upon the LORD, &lt;em&gt;who is worthy&lt;/em&gt; to be praised: so shall I be saved from mine enemies. The sorrows of death compassed me, and the floods of ungodly men made me afraid. The sorrows of hell compassed me about: the snares of death prevented me.&lt;/p&gt;</description>
     </item>
     <item>
       <title>All Praise to You O Lord</title>
-      <link>//localhost:1313/faith/all-praise-to-you/</link>
+      <link>danielakproh.github.io/faith/all-praise-to-you/</link>
       <pubDate>Sat, 16 Nov 2024 20:51:34 -0500</pubDate>
-      <guid>//localhost:1313/faith/all-praise-to-you/</guid>
+      <guid>danielakproh.github.io/faith/all-praise-to-you/</guid>
       <description>&lt;p&gt;O Lord, how majestic is Your name in all the earth! You are the Creator of the heavens and the earth, the One who spoke light into existence with a Word. By Your breath, the stars were flung into the expanse, each one declaring Your glory and craftsmanship. You are the Alpha and the Omega, the beginning and the end, the Starter and Finisher, the Eternal One who transcends time and space. Before the mountains were brought forth, before the seas roared their praise, You were God, enthroned in majesty, clothed in light, and surrounded by the unending chorus of heavenly beings who shout: &amp;ldquo;Holy, holy, holy is the Lord God Almighty; the whole earth is full of His glory!&amp;rdquo;&lt;/p&gt;</description>
     </item>
   </channel>
