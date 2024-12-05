@@ -1,10 +1,9 @@
-/* General body styling */
 body {
   max-width: 1000px;
   margin: auto;
   padding: 1em;
   line-height: 1.5;
-  font-size: 1.2em;
+  font-size: 1.4em;
   background: #ffffff url('/img/paper-texture7.jpg') repeat;
   background-blend-mode: multiply; /* Blend the image with the background color */
   background-size: 400px 400px; /* Scale for subtle repetitions */
@@ -37,17 +36,16 @@ em {
 .toc {
   position: fixed;
   left: calc(((100vw - 1000px)/2) - 350px);
+  left:10px;
   top: 20px;
   width: 220px;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #f9f9f9;
+  border-left: 5px solid #ddd;
+  /* border-radius: 5px; */
+  /* background: #f9f9f9; */
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.7em;
-  color: #333;
-  max-height: calc(100vh - 40px); /* Ensure it doesn't exceed viewport height */
-  overflow-y: auto;
+  font-size: 0.75em;
+  color: #000000;
   z-index: 1000;
 }
 
@@ -58,7 +56,7 @@ em {
 
   .toc {
     position: fixed;
-    left: calc(((100vw - 800px)/2) - 350px);
+    left: 10px;
   }
 }
 
@@ -128,7 +126,7 @@ em {
 /* Header and footer areas */
 .header-meta {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -191,6 +189,7 @@ footer a {
 
 hr {
   color: #ddd;
+  margin: 0;
 }
 
 /* Code block and table styling */
@@ -230,6 +229,10 @@ thead, tfoot, tr:nth-child(even) {
 }
 
 /* Content elements */
+.content {
+  margin: 3em;
+}
+
 .content img,
 .content table,
 .content pre,
@@ -280,35 +283,44 @@ main ul li small {
 
 
 blockquote {
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
   border-left: 5px solid #ccc;
+  font-size: 1.5em;
   padding: 3px 1em 3px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1500px) {
+@media (max-width: 1300px) {
   .toc {
-    display: none; /* Hide TOC by default */
+    display: none;
   }
 
   body {
-    max-width: 900px;
+    max-width: 800px;
   }
 }
+
+
 
 /* Article Header Styling */
 .article-header {
   text-align: center;
-  margin-bottom: 2em;
+  margin: 2em;
 }
 
 .article-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Imperial Script", cursive;
+  /* font-family: "MonteCarlo", cursive; */
   /* font-family: 'Cinzel Decorative', serif; */
   /* font-family: 'Great Vibes', cursive; */
-  font-size: 2.5em;
-  margin: 0.5em;
+  font-size: 3em;
+  margin: 0;
 }
+
+@media (max-width: 785px) {
+  .article-title {
+    font-size: 3em;
+  }
+ }
 
 .intro {
   font-family: 'Palatino', serif;
@@ -329,19 +341,7 @@ blockquote {
 }
 
 /* Drop Cap for Content */
-.drop-cap p:first-of-type::first-letter {
-  margin-top: 0.3em; 
-  padding-left: 0.05em;
-  overflow: visible;
-  font-family: "Great Vibes", cursive;
-  font-size: 4em;
-  font-weight: normal;
-  float: left;
-  line-height: 0.4;
-  margin-right: 0.2em;
-  vertical-align: top;
-  color: #333;
-}
+
 
 .no-drop-cap{
   all: unset;
@@ -350,7 +350,7 @@ blockquote {
 /* Navigation Menu Styling */
 nav .menu {
   display: flex;
-  font-family: "Inter";
+  /* font-family: "Inter"; */
   justify-content: center;
   list-style: none;
   padding: 0;
@@ -449,49 +449,46 @@ nav .menu a:hover {
 }
 
 .definition {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  font-family: "Inter";
+  background: #e6e6e6;
+  border: 5px solid #ddd;
   border-radius: 5px;
   padding: 7px;
 }
 
 .definition h3 {
-  font-family: "Inter";
-  font-size: inherit;
   margin: 7px;
   font-weight: bold;
 }
 
 .definition p {
   margin-left: 7px;
+  font-size: .9em
 }
 
 /* Table Styling */
 table {
-  width: 100%;
-  border-collapse: separate; /* Separate borders for better styling */
-  border-spacing: 0; /* Remove extra spacing between cells */
-  margin: 20px 0; /* Add spacing from other elements */
+  width: 70%;
+  margin: 0 auto;
   background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px; /* Rounded corners */
-  overflow: hidden; /* Ensures corners are properly rounded */
-  /* font-family: 'Georgia', serif; Matches your book-y theme */
-  font-size: 1em;
-  text-align: left; /* Left-align content */
+  border: 4px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
 }
 
 /* Table Header */
 table thead th {
-  background: #e9e9e9; /* Subtle contrast for header */
-  font-weight: bold; /* Highlight header */
-  padding: 10px; /* Add spacing */
-  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+  background: #ddd;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px; 
+  border-bottom: 5px solid #ddd;
 }
 
 /* Table Rows */
 table tbody tr {
-  border-bottom: 1px solid #ddd; /* Subtle row separation */
+  border-bottom: 1px solid #ddd; 
 }
 
 table tbody tr:nth-child(even) {
@@ -499,7 +496,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr:hover {
-  background: #e9e9e9; /* Highlight row on hover */
+  background: #dac65762; /* Highlight row on hover */
   transition: background 0.3s ease; /* Smooth hover effect */
 }
 
@@ -518,4 +515,19 @@ table img {
   height: auto; /* Maintain the aspect ratio */
   margin-right: 3px; /* Add spacing between the icon and text */
   vertical-align: -4px;
+}
+
+.drop-letter {
+  color: #007bff;
+  margin-top: 0.3em; 
+  padding-left: 0.05em;
+  overflow: visible;
+  font-family: "Great Vibes", cursive;
+  font-size: 4em;
+  font-weight: normal;
+  float: left;
+  line-height: 0.1;
+  margin-right: 0.2em;
+  vertical-align: top;
+  color: #b09931;
 }
