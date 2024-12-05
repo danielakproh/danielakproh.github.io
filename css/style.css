@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   padding: 1em;
   line-height: 1.5;
@@ -8,6 +8,10 @@ body {
   background: #ffffff url('/img/paper-texture7.jpg') repeat;
   background-blend-mode: multiply; /* Blend the image with the background color */
   background-size: 400px 400px; /* Scale for subtle repetitions */
+}
+
+h1 {
+  font-family: "Inter";
 }
 
 em {
@@ -29,7 +33,7 @@ em {
 /* TOC styling */
 .toc {
   position: fixed;
-  left: calc((100vw - 900px) / 2 - 277px); /* Dynamically position TOC */
+  left: calc((100vw - 900px) / 2 - 450px); /* Dynamically position TOC */
   top: 20px;
   width: 220px;
   padding: 10px;
@@ -320,6 +324,7 @@ blockquote {
 /* Navigation Menu Styling */
 nav .menu {
   display: flex;
+  font-family: "Inter";
   justify-content: center;
   list-style: none;
   padding: 0;
