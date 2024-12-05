@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>danielakproh.github.io/posts/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/the-lord-is-my-rock/</loc>
+    <loc>//localhost:1313/posts/the-lord-is-my-rock/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/royal-oak-all-things-bright-and-beautiful/</loc>
+    <loc>//localhost:1313/posts/royal-oak-all-things-bright-and-beautiful/</loc>
     <lastmod>2024-11-28T22:46:53-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2024-11-27T08:54:59-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/einstein/</loc>
+    <loc>//localhost:1313/posts/einstein/</loc>
     <lastmod>2024-11-27T08:54:59-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/categories/mathematics/</loc>
+    <loc>//localhost:1313/categories/mathematics/</loc>
     <lastmod>2024-11-27T08:54:59-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/chord-rendering/</loc>
+    <loc>//localhost:1313/posts/chord-rendering/</loc>
     <lastmod>2024-11-26T15:26:07-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/how-pleasant-it-is-to-dwell-together-in-unity/</loc>
+    <loc>//localhost:1313/posts/how-pleasant-it-is-to-dwell-together-in-unity/</loc>
     <lastmod>2024-11-24T00:15:48-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/physics/</loc>
+    <loc>//localhost:1313/posts/physics/</loc>
     <lastmod>2024-11-20T12:36:29-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/physics/rotational-motion-movement-in-circle/</loc>
+    <loc>//localhost:1313/posts/physics/rotational-motion-movement-in-circle/</loc>
     <lastmod>2024-11-20T12:36:29-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/i-will-love-thee/</loc>
+    <loc>//localhost:1313/posts/i-will-love-thee/</loc>
     <lastmod>2024-11-19T08:34:55-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/posts/all-praise-to-you-o-lord/</loc>
+    <loc>//localhost:1313/posts/all-praise-to-you-o-lord/</loc>
     <lastmod>2024-11-16T20:51:34-05:00</lastmod>
   </url><url>
-    <loc>danielakproh.github.io/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
