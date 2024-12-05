@@ -10,6 +10,9 @@ body {
   background-size: 400px 400px; /* Scale for subtle repetitions */
 }
 
+
+
+
 h1 {
   font-family: "Inter";
 }
@@ -33,7 +36,7 @@ em {
 /* TOC styling */
 .toc {
   position: fixed;
-  left: calc((100vw - 900px) / 2 - 450px); /* Dynamically position TOC */
+  left: calc(((100vw - 1000px)/2) - 350px);
   top: 20px;
   width: 220px;
   padding: 10px;
@@ -46,6 +49,23 @@ em {
   max-height: calc(100vh - 40px); /* Ensure it doesn't exceed viewport height */
   overflow-y: auto;
   z-index: 1000;
+}
+
+@media (max-width: 1700px) {
+  body {
+    max-width: 800px;
+  }
+
+  .toc {
+    position: fixed;
+    left: calc(((100vw - 800px)/2) - 350px);
+  }
+}
+
+@media (max-width: 1300px) {
+  /* .toc {
+    left: calc((100vw - 900px) / 2 - 450px);
+  } */
 }
 
 /* TOC List Style */
@@ -92,6 +112,8 @@ em {
   font-weight: bold;
   transition: all 0.3s ease; /* Smooth active transition */
 }
+
+
 
 /* Article meta information */
 .article-meta {
@@ -264,9 +286,13 @@ blockquote {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .toc {
     display: none; /* Hide TOC by default */
+  }
+
+  body {
+    max-width: 900px;
   }
 }
 
