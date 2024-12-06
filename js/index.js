@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.opacity = "1";
     const toc = document.querySelector(".toc"); 
     const tocLinks = toc ? toc.querySelectorAll("a") : [];
     const sections = Array.from(tocLinks).map(link => {

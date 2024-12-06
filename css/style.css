@@ -3,13 +3,25 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5;
-  font-size: 1.4em;
+  font-size: 1.2em;
   background: #ffffff url('/img/paper-texture7.jpg') repeat;
   background-blend-mode: multiply; /* Blend the image with the background color */
   background-size: 400px 400px; /* Scale for subtle repetitions */
 }
 
+body {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 
 h1 {
@@ -18,6 +30,25 @@ h1 {
 
 em {
   font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none; /* Remove underline by default */
+  color: #007bff; /* Base color */
+  transition: color 0.1s ease, border-bottom 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+  color: #b09931; /* Highlight color */
+  border-bottom: #b09931;/* Underline on hover */
+}
+
+a:visited {
+  color: #5a5a5a; /* Subtle shade for visited links */
+}
+
+a:active {
+  color: #b0771a; /* Slightly darker shade on active state */
 }
 
 /* Outer wrapper and main body container */
@@ -36,22 +67,29 @@ em {
 .toc {
   position: fixed;
   left: calc(((100vw - 1000px)/2) - 350px);
-  left:10px;
   top: 20px;
   width: 220px;
   padding: 10px;
   border-left: 5px solid #ddd;
-  /* border-radius: 5px; */
-  /* background: #f9f9f9; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75em;
   color: #000000;
   z-index: 1000;
 }
 
+.toc h3 {
+  font-family: "Inter", sans-serif; /* Match your site's font */
+  font-size: 1.4em; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* Neutral color */
+  margin: 0 0 10px; /* Add spacing below the heading */
+  text-align: left; /* Align with the TOC content */
+  border-bottom: 2px solid #ddd; /* Optional: add a separator */
+}
+
 @media (max-width: 1700px) {
   body {
-    max-width: 800px;
+    max-width: 900px;
   }
 
   .toc {
@@ -60,10 +98,14 @@ em {
   }
 }
 
-@media (max-width: 1300px) {
-  /* .toc {
-    left: calc((100vw - 900px) / 2 - 450px);
-  } */
+@media (max-width: 400px) {
+  body {
+    font-size: 0.87em;
+  }
+
+  .content {
+    margin: 0px !important;
+  }
 }
 
 /* TOC List Style */
@@ -90,23 +132,23 @@ em {
 .toc a {
   text-decoration: none;
   display: block;
-  padding: 1px 0px;
-  border-radius: 5px;
+  padding: 2px 0px;
   color: #333;
   transition: all 0.3s ease;
 }
 
 /* TOC Hover Effect */
 .toc a:hover {
-  color: #666;
-  background: #f2f2f2; /* Light grey background on hover */
-  transition: all 0.3s ease; /* Smooth hover transition */
+  color: #b09931;
+  transition: all 0.5s ease;
+  
 }
 
 /* Active TOC Link */
 .toc a.active {
   color: #000; /* Darker color for the active link */
-  background: #f2f2f2;
+  background: #dfdfdf;
+  border-radius: 3px;
   font-weight: bold;
   transition: all 0.3s ease; /* Smooth active transition */
 }
@@ -295,7 +337,11 @@ blockquote {
   }
 
   body {
-    max-width: 800px;
+    max-width: 900px;
+  }
+
+  .content {
+    margin: 0px !important;
   }
 }
 
@@ -365,15 +411,16 @@ nav .menu a {
   font-family: inherit;
   font-size: 1.2em;
   font-weight: bold;
-  color: #333; /* Neutral dark color */
+  color: #000000; /* Neutral dark color */
+  transition: color 0.2s ease, background-color 0.2s ease, text-decoration 0.5s ease;
+  /* Specifies smooth transitions for color, background, and text-decoration */
 }
 
 nav .menu a:hover {
-  color: #000; /* Darker text on hover */
+  color: #b09931; /* Golden tone for hover */
   border-color: #bbb; /* Slightly darker border on hover */
-  background-color: #e9e9e9; /* Slightly darker background on hover */
+  background-color: #8b0303; /* Slightly darker background on hover */
   text-decoration: underline; /* Optional: Underline for hover */
-
 }
 
 .logo-container {
@@ -531,3 +578,14 @@ table img {
   vertical-align: top;
   color: #b09931;
 }
+
+.site-logo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.1);
+  border-bottom: 0px;
+}
+
+
