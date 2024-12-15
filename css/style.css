@@ -33,7 +33,6 @@ em {
 }
 
 a {
-  text-decoration: none; /* Remove underline by default */
   color: #007bff; /* Base color */
   transition: color 0.1s ease, border-bottom 0.3s ease; /* Smooth transition */
 }
@@ -44,7 +43,7 @@ a:hover {
 }
 
 a:visited {
-  color: #5a5a5a; /* Subtle shade for visited links */
+  color: #813c92; /* Subtle shade for visited links */
 }
 
 a:active {
@@ -378,13 +377,17 @@ blockquote {
 }
 
 /* Article Meta Information */
-.article-meta .date {
+.article-meta{
   font-family: 'Palatino', serif;
   font-style: italic;
   font-size: 0.9em;
   color: #666;
   margin-top: 1em;
   text-align: center;
+}
+
+.date {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /* Drop Cap for Content */
@@ -418,9 +421,9 @@ nav .menu a {
 }
 
 nav .menu a:hover {
-  color: #e0bf2c; /* Golden tone for hover */
+  color: #020202; /* Golden tone for hover */
   border-color: #bbb; /* Slightly darker border on hover */
-  background-color: #8b0303; /* Slightly darker background on hover */
+  background-color: #b09931; /* Slightly darker background on hover */
   text-decoration: underline; /* Optional: Underline for hover */
 }
 
@@ -432,8 +435,7 @@ nav .menu a:hover {
 }
 
 .site-logo {
-  top: 20px;
-  width: 90%; /* Adjust size as needed */
+  top: 20px; /* Adjust size as needed */
   height: auto;
   display: block;
 }
@@ -581,6 +583,7 @@ table img {
 }
 
 .site-logo {
+  max-width: 10%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -626,4 +629,37 @@ table img {
 
 .breadcrumbs li:last-child::after {
   content: "";
+}
+
+.header-meta {
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  margin-top: 0;
+}
+
+.logo-container {
+  margin-bottom: 10px; /* Add spacing below the logo if needed */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* Center menu items horizontally */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 10px; /* Add spacing between menu items */
+}
+
+.menu a {
+  text-decoration: underline;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333; /* Neutral dark color */
+}
+
+.menu a:hover {
+  color: #b09931;
 }
