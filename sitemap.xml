@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://danielakproh.github.io/math/</loc>
+    <lastmod>2024-12-14T22:01:18-05:00</lastmod>
+  </url><url>
+    <loc>https://danielakproh.github.io/math/what-is-the-variational-autoencoder/</loc>
+    <lastmod>2024-12-14T22:01:18-05:00</lastmod>
+  </url><url>
+    <loc>https://danielakproh.github.io/</loc>
+    <lastmod>2024-12-14T22:01:18-05:00</lastmod>
+  </url><url>
     <loc>https://danielakproh.github.io/faith/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
     <loc>https://danielakproh.github.io/faith/the-lord-is-my-rock/</loc>
-    <lastmod>2024-12-03T15:33:32-05:00</lastmod>
-  </url><url>
-    <loc>https://danielakproh.github.io/</loc>
     <lastmod>2024-12-03T15:33:32-05:00</lastmod>
   </url><url>
     <loc>https://danielakproh.github.io/music/</loc>
@@ -27,9 +33,6 @@
     <lastmod>2024-11-27T08:54:59-05:00</lastmod>
   </url><url>
     <loc>https://danielakproh.github.io/math/linear-algebra/</loc>
-    <lastmod>2024-11-27T08:54:59-05:00</lastmod>
-  </url><url>
-    <loc>https://danielakproh.github.io/math/</loc>
     <lastmod>2024-11-27T08:54:59-05:00</lastmod>
   </url><url>
     <loc>https://danielakproh.github.io/math/math-problem/</loc>
