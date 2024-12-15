@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programmings on Words of Praise</title>
+    <link>https://danielakproh.github.io/programming/</link>
+    <description>Recent content in Programmings on Words of Praise</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Dec 2024 13:48:33 -0500</lastBuildDate>
+    <atom:link href="https://danielakproh.github.io/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Chatgpt</title>
+      <link>https://danielakproh.github.io/programming/system-design-chatgpt/</link>
+      <pubDate>Sun, 15 Dec 2024 13:48:33 -0500</pubDate>
+      <guid>https://danielakproh.github.io/programming/system-design-chatgpt/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
