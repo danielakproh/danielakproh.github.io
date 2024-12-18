@@ -58,6 +58,10 @@ a:active {
   color: #b0771a;
 }
 
+p {
+  /* margin: 2em 0; */
+}
+
 /* Outer wrapper and main body container */
 .outer-wrapper {
   display: flex;
@@ -136,6 +140,7 @@ a:active {
   /* display: flex;
   align-items: center;
   margin-top: 0; */
+  overflow: hidden;
 }
 
 /* Navigation Menu Styling */
@@ -193,7 +198,7 @@ nav .menu a:hover {
   /* font-family: 'Cinzel Decorative', serif; */
   /* font-family: 'Great Vibes', cursive; */
   font-size: 3em;
-  margin: 0;
+  margin: .4em 0;
 }
 
 .article-header {
@@ -203,6 +208,7 @@ nav .menu a:hover {
 
 .date {
   font-family: 'Courier New', Courier, monospace;
+  margin: 1em 0;
 }
 
 .title {
@@ -302,7 +308,7 @@ table img {
 
 /* Content elements */
 .content {
-  margin: 3em;
+  /* margin: 3em; */
 }
 
 .content img,
@@ -329,6 +335,7 @@ blockquote {
   border-left: 5px solid #ccc;
   font-size: 1.5em;
   padding: 3px 1em 3px;
+  margin: 2em 0;
 }
 
 
@@ -510,7 +517,65 @@ blockquote {
 
 /* **************************** Experiment **************************** */
 
-nav a {
-  display: inline-block;
-  vertical-align: middle;
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* margin-bottom: 0.5em; */
+}
+
+.post-title {
+  text-decoration: none;
+  color: #333;
+  font-family: "Imperial Script";
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.post-date {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.post-divider {
+  border: none;
+  border-top: 2px solid #524f4f;
+}
+
+.post-summary {
+  color: #444;
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+
+.reading-time {
+  display: block;
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+.post-card-link {
+  text-decoration: none;
+}
+
+.post-card {
+  position: relative;
+  padding: 1.1em 2em;
+  border-left: 3px solid #b09931;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects */
+.post-card-link:hover .post-card {
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
 }
