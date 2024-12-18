@@ -32,6 +32,8 @@ hr {
 
 h1 {
   font-family: "Inter";
+  font-weight: bold;
+  margin: .7em 0;
 }
 
 em {
@@ -131,18 +133,16 @@ a:active {
 }
 
 .header-meta {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  margin-top: 0;
-}
-
-.header-meta {
-  display: flex;
-  align-items: center;
-  margin-top: 0;
+  margin-top: 0; */
 }
 
 /* Navigation Menu Styling */
+nav {
+  margin: 0 0 .5em 0;
+}
+
 nav .menu {
   display: flex;
   /* font-family: "Inter"; */
@@ -337,18 +337,19 @@ blockquote {
 }
 
 .logo-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-right: auto;
-  margin-bottom: 10px;
+  justify-content: flex-start; */
+  /* margin-right: auto;
+  margin-bottom: 10px; */
 }
 
 .site-logo {
-  top: 20px;
+  width: 7%;
+  /* top: 20px;
   height: auto;
   display: block;
-  max-width: 10%;
+  max-width: 10%; */
 }
 
 .site-logo:hover {
@@ -473,7 +474,7 @@ blockquote {
   }
 
   .site-logo {
-    max-width: 25%;
+    width: 10%;
   }
 
 }
@@ -491,10 +492,25 @@ blockquote {
 }
 
 @media (max-width: 400px) {
-  
-
-  .site-logo {
-    max-width: 45%;
+  body {
+    font-size: 1em;
   }
+
+  nav ul{
+    font-size: .9em;
+  }
+
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  
 } 
 
+/* **************************** Experiment **************************** */
+
+nav a {
+  display: inline-block;
+  vertical-align: middle;
+}
